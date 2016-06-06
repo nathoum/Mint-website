@@ -1,0 +1,56 @@
+{
+  "name": "Mint-Website",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": "/issues"
+  },
+  "license": "MIT",
+  "authors": [
+    "Nathalie Marchal <marchal.nath@gmail.com>"
+  ],
+  "contributors": [
+    {
+      "name": "Soufiane Lasri",
+      "email": "soufiane.lasri@gmail.com"
+    }
+  ],
+  "engines": {
+    "node": "*",
+    "npm": "*"
+  },
+  "devDependencies": {
+    "babelify": "*",
+    "browser-sync": "*",
+    "browserify": "*",
+    "del": "*",
+    "gulp": "*",
+    "gulp-concat": "*",
+    "gulp-copy": "*",
+    "gulp-cssmin": "*",
+    "gulp-data": "*",
+    "gulp-imagemin": "*",
+    "gulp-notify": "*",
+    "gulp-plumber": "*",
+    "gulp-rename": "*",
+    "gulp-rev": "*",
+    "gulp-rev-collector": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-stylus": "^2.3.1",
+    "gulp-usemin": "*",
+    "gulp-util": "*",
+    "gulp-watch": "*",
+    "gulp-livereload": "*",
+    "gulp-jade": "*",
+    "run-sequence": "*",
+    "signals": "*",
+    "vinyl-buffer": "*",
+    "vinyl-source-stream": "*",
+    "watchify": "*",
+    "yargs": "*"
+  }
+}
