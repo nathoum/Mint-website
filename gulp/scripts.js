@@ -2,35 +2,35 @@ var gulp = require( "gulp" );
 var gutil = require( "gulp-util" );
 var plumber = require( "gulp-plumber" );
 
-var stylus = require('gulp-stylus');
+var stylus = require("gulp-stylus");
 var rename = require("gulp-rename");
-var livereload = require('gulp-livereload');
+var livereload = require("gulp-livereload");
 
 var browserify = require( "browserify" );
 var babelify = require( "babelify" );
 var watchify = require( "watchify" );
 var source = require( "vinyl-source-stream" );
 
-var jade = require('gulp-jade');
+var jade = require("gulp-jade");
 
 var paths = require( "./config" ).paths;
 
 var w = null;
 
 
-gulp.task('css', function () {
-    gulp.src( paths.styles + 'global.styl')
+gulp.task("css", function () {
+    gulp.src( paths.styles + "global.styl")
         .pipe(stylus({compress: false, paths: [paths.styles]}))
-        .pipe(rename('global.css'))
-        .pipe(gulp.dest('build/css'))
+        .pipe(rename("global.css"))
+        .pipe(gulp.dest("build/css"))
         .pipe(livereload());
 
 
 });
-gulp.task('jade', function() {
-  gulp.src(paths.templates +'*.jade')
+gulp.task("jade", function() {
+  gulp.src(paths.templates +"*.jade")
     .pipe(jade())
-    .pipe(gulp.dest('build'))
+    .pipe(gulp.dest("build"))
 });
 
 
