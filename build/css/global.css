@@ -12,7 +12,18 @@ body .header {
   right: 0;
   width: 50%;
   min-width: 300px;
-  color: #000;
+}
+body .header--whiteTint {
+  color: #fff;
+}
+body .header--yellowTint {
+  color: #ff0;
+}
+body .header--purpleTint {
+  color: #800080;
+}
+body .header--turquoiseTint {
+  color: #40e0d0;
 }
 body .header .navlist {
   padding: 0;
