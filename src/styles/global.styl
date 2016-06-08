@@ -1,8 +1,52 @@
 
 body
-    overflow: hidden
-    padding: 0
-    margin: 0
-    color #333
-    background white
-    font-family: Calibri, Arial, sans-serif
+  overflow-x: hidden
+  padding: 0
+  margin: 0
+  color #333
+  background white
+  font-family: Arial, sans-serif
+
+  .header
+    position: fixed
+    top: 15px
+    right: 0
+    width: 50%
+    min-width: 300px
+    color: black
+
+    .navlist
+      padding: 0
+      margin: 0
+      list-style: none
+      text-transform: uppercase
+      &-item
+        width: 30%
+        float: left
+        &-link
+          padding: 12px
+
+  .container
+    width 100vw
+    height 100vh
+    &-overlay
+      width: 100%
+      height: 100%
+      background-color: rgba(255, 255, 255, 0.8)
+
+    &--createBackground
+      background: url(../images/background-create-mint.png) no-repeat center center
+      background-size: cover
+
+    &--friendsBackground
+      background: url(../images/background-friends-surprise.png) no-repeat center center
+      background-size: cover
+
+    &--aroundBackground
+      background: url(../images/background-aroundthem.png) no-repeat center center
+      background-size: cover
+
+    &--reactionBackground
+      background: url(../images/background-reaction.png) no-repeat center center
+      background-size: cover
+

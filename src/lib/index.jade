@@ -3,7 +3,32 @@ html
   head
     include ./includes/head
   body
-    h1 Mint
-    p Basic workflow
+    header.header
+      nav
+        ul.navlist
+          li.navlist-item.active 
+            a.navlist-item-link Teaser
+          li.navlist-item
+            a.navlist-item-link Concept
+          li.navlist-item
+            a.navlist-item-link Team
+
+    section.container#teaser
+    
+    section.container.container--createBackground#concept
+      div.container-overlay
+        h1 Create your own Mint
+
+    section.container.container--friendsBackground
+      div.container-overlay
+        h1 Let your friends find the surprise you hide
+
+    section.container.container--aroundBackground
+      div.container-overlay
+        h1 Let your friends find the surprise you hide
+
+    section.container.container--reactionBackground
+      div.container-overlay
+        h1 Find out how they reacted
 
   script(src="/js/main.js")

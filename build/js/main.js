@@ -7,6 +7,12 @@ class Animations {
     }
 
     init() {}
+    //window.addEventListener('scroll', evt => this.scrollAction(evt))
+
+
+    /*scrollAction(evt) {
+    	console.log("val: " + window.scrollY)
+    }*/
 
 }
 
