@@ -7,40 +7,27 @@
     }
 
     init() {
+    	this.navlistItem = document.getElementsByClassName("navlist-item-link")
     	console.log('height: '+ window.innerHeight)
     	window.addEventListener('scroll', evt => this.scrollAction(evt))
     }
 
     scrollAction(evt) {
-    	//document.getElementsByClassName("header")[i].className = "header"
-
-    	//console.log("val: " + window.scrollY)
-
-    	/*if(window.scrollY >= window.innerHeight) {
-    		console.log("bigger!")
-    	}*/
-
-    	//var x = this.dealer;
 		switch (true) {
-		    case (window.scrollY < window.innerHeight):
-		        console.log("section 1")
-		        //document.getElementsByClassName("header")[i].className = ".header .header--whiteTint"
-		       document.querySelector(".header").className = "header header--whiteTint"
+		    case (window.scrollY <= window.innerHeight):
+		       TweenMax.to( this.navlistItem, 0.2, { color: "white", ease: Circ.easeInOut } )
 		        break;
-		    case (window.scrollY > window.innerHeight && window.scrollY < window.innerHeight * 2):
-		        console.log("section 2")
-		        document.querySelector(".header").className = "header header--yellowTint"
-		        //document.querySelector(".header").classList.add("header--yellowTint")
+		    case (window.scrollY >= window.innerHeight && window.scrollY < window.innerHeight * 2):
+		        TweenMax.to( this.navlistItem, 0.2, { color: "#FF7E27", ease: Circ.easeInOut } )
 		        break;
-		    case (window.scrollY > window.innerHeight * 2 && window.scrollY < window.innerHeight * 3):
-		        console.log("section 3")
-		        document.querySelector(".header").className = "header header--purpleTint"
-		        //document.querySelector(".header").classList.add("header--purpleTint")
+		    case (window.scrollY >= window.innerHeight * 2 && window.scrollY < window.innerHeight * 3):
+		        TweenMax.to( this.navlistItem, 0.2, { color: "#9145DB", ease: Circ.easeInOut } )
 		        break;
-		    case (window.scrollY > window.innerHeight * 3 && window.scrollY < window.innerHeight * 4):
-		        console.log("section 4")
-		        document.querySelector(".header").className = "header header--turquoiseTint"
-		        //document.querySelector(".header").classList.add("header--turquoiseTint")
+		    case (window.scrollY >= window.innerHeight * 3 && window.scrollY < window.innerHeight * 4):
+		        TweenMax.to( this.navlistItem, 0.2, { color: "#77F2DA", ease: Circ.easeInOut } )
+		        break;
+		    case (window.scrollY >= window.innerHeight * 4 && window.scrollY < window.innerHeight * 5):
+		        TweenMax.to( this.navlistItem, 0.2, { color: "#FF0B45", ease: Circ.easeInOut } )
 		        break;
 		    default:
 		        console.log("else");

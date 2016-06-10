@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins')
 
 body
   overflow-x: hidden
@@ -5,14 +6,15 @@ body
   margin: 0
   color #333
   background white
-  font-family: Arial, sans-serif
+  font-family: 'Poppins', sans-serif
 
   .header
     position: fixed
     top: 15px
     right: 0
     width: 50%
-    min-width: 300px
+    max-width: 400px
+    z-index: 10
     
     &--whiteTint
       color: white
@@ -29,11 +31,16 @@ body
       margin: 0
       list-style: none
       text-transform: uppercase
+      font-size: 1,5em
       &-item
         width: 30%
+        max-width: 120px
         float: left
+        margin-left: 5px
         &-link
           padding: 12px
+          text-decoration: none
+          color: white
 
   .container
     width: 100vw
@@ -44,6 +51,35 @@ body
       height: 100%
       position: absolute
       background-color: rgba(255, 255, 255, 0.8)
+
+      &-bloc
+        width: 50%
+
+        &-wrapper
+          display: table-cell
+          vertical-align: middle
+
+
+      &-bloc--tablePos
+        height: 100%
+        display: table
+
+      &-bloc--left
+        float: left
+
+      &-bloc--right
+        float: right
+
+      &-h1
+        &--aroundCustom
+          color: #5CD6BF
+          font-size: 2.0em
+          text-transform: uppercase
+          font-weight: normal
+
+      &-text
+        padding: 10px
+
 
     &-videobackground
       position: absolute

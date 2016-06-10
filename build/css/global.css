@@ -1,17 +1,19 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
 body {
   overflow-x: hidden;
   padding: 0;
   margin: 0;
   color: #333;
   background: #fff;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 body .header {
   position: fixed;
   top: 15px;
   right: 0;
   width: 50%;
-  min-width: 300px;
+  max-width: 400px;
+  z-index: 10;
 }
 body .header--whiteTint {
   color: #fff;
@@ -30,13 +32,18 @@ body .header .navlist {
   margin: 0;
   list-style: none;
   text-transform: uppercase;
+  font-size: 1, 5em;
 }
 body .header .navlist-item {
   width: 30%;
+  max-width: 120px;
   float: left;
+  margin-left: 5px;
 }
 body .header .navlist-item-link {
   padding: 12px;
+  text-decoration: none;
+  color: #fff;
 }
 body .container {
   width: 100vw;
@@ -48,6 +55,32 @@ body .container-overlay {
   height: 100%;
   position: absolute;
   background-color: rgba(255,255,255,0.8);
+}
+body .container-overlay-bloc {
+  width: 50%;
+}
+body .container-overlay-bloc-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+body .container-overlay-bloc--tablePos {
+  height: 100%;
+  display: table;
+}
+body .container-overlay-bloc--left {
+  float: left;
+}
+body .container-overlay-bloc--right {
+  float: right;
+}
+body .container-overlay-h1--aroundCustom {
+  color: #5cd6bf;
+  font-size: 2em;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+body .container-overlay-text {
+  padding: 10px;
 }
 body .container-videobackground {
   position: absolute;
