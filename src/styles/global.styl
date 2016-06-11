@@ -46,39 +46,155 @@ body
     width: 100vw
     height: 100vh
     position: relative
+
+    &-listMembers
+      list-style: none
+      padding: 0
+      margin: 0
+      text-align: center
+
+      &-item
+        width: 20%
+        display: inline-block
+        text-align: center
+        height: 110px
+        padding-top: 217px
+
+        &-p
+          text-align: center
+
+          &-span
+            display: block
+
+            &--bigtext
+              font-size: 2.0em
+            &--uppercase
+              text-transform: uppercase
+            &--blueTint
+              color: #BEE2E0
+            &--pinkTint
+              color: #F15757
+            &--yellowTint
+              color: #FEEA99
+            &--purpleTint
+              color: #A162B1
+
+
+      &-item--member1
+        background: url(../images/member-mint-marianne.png) no-repeat top center
+      &-item--member2
+        background: url(../images/member-mint-celia.png) no-repeat top center
+      &-item--member3
+        background: url(../images/member-mint-nath.png) no-repeat top center
+      &-item--member4
+        background: url(../images/member-mint-souf.png) no-repeat top center
+
+    &-blurfilter
+      width: 100%
+      height: 100%
+      position: absolute
+      z-index: 5
+      -webkit-filter: blur(5px)
+      -moz-filter: blur(5px)
+      -o-filter: blur(5px)
+      -ms-filter: blur(5px)
+      filter: blur(5px)
+
+    &-blurfilter--aroundBackground
+      background: url(../images/background-aroundthem.png) no-repeat center center
+      background-size: cover
+      
+    &-blurfilter--reactionBackground
+      background: url(../images/background-reaction.png) no-repeat center center
+      background-size: cover
+
+    &-blurfilter--createBackground
+      background: url(../images/background-create-mint.png) no-repeat center center
+      background-size: cover
+
+    &-blurfilter--friendsBackground
+      background: url(../images/background-friends-surprise.png) no-repeat center center
+      background-size: cover
+
     &-overlay
       width: 100%
       height: 100%
       position: absolute
+      z-index: 6
       background-color: rgba(255, 255, 255, 0.8)
 
-      &-bloc
-        width: 50%
 
-        &-wrapper
-          display: table-cell
-          vertical-align: middle
+    &-bloc
+      position: relative
+      z-index: 7
+
+      
+      &-wrapper
+        display: table-cell
+        vertical-align: middle
+
+        &--textalign
+          text-align: center
+
+        &--center
+          text-align: center
 
 
-      &-bloc--tablePos
-        height: 100%
-        display: table
+    &-bloc--tablePos
+      height: 100%
+      width: 100%
+      display: table
 
-      &-bloc--left
-        float: left
+    &-bloc--textalign
+      text-align: center
 
-      &-bloc--right
-        float: right
+    &-bloc--left
+      float: left
+      width: 50%
 
-      &-h1
-        &--aroundCustom
-          color: #5CD6BF
-          font-size: 2.0em
+    &-bloc--right
+      float: right
+      width: 50%
+
+    &-h1
+      font-size: 2.0em
+      &--aroundCustom
+        color: #5CD6BF
+        text-transform: uppercase
+        font-weight: normal
+
+      &--smallWidthTxt
+        width: 212px
+        margin: 0 auto
+      &--purpleTint
+        color: #9145DB
+
+      &-span
+        display: block
+  
+
+        &--uppercase
           text-transform: uppercase
-          font-weight: normal
+        &--pinkTint
+          color: #FF0B45
+        &--greyTint
+          color: #4F4F4F
+        &--pinkTint
+          color: #FF0B45
+        &--marginLeft
+          margin-left: 40px
+        &--marginLeftBig
+          margin-left: 20%
 
-      &-text
-        padding: 10px
+
+    &-text
+      padding: 10px
+      width: 84%
+      max-width: 400px
+      text-align: justify
+
+      &--center
+        margin: 0 auto
 
 
     &-videobackground
@@ -87,8 +203,9 @@ body
       bottom: 0
       top: 0
       right: 0
-      width: 100%;
-      height: 100%;
+      width: 100%
+      height: 100%
+      z-index: 2
       background-size: 100% 100%
       background-color: black
       background-position: center center
@@ -96,19 +213,4 @@ body
       object-fit: cover
 
 
-    &--createBackground
-      background: url(../images/background-create-mint.png) no-repeat center center
-      background-size: cover
-
-    &--friendsBackground
-      background: url(../images/background-friends-surprise.png) no-repeat center center
-      background-size: cover
-
-    &--aroundBackground
-      background: url(../images/background-aroundthem.png) no-repeat center center
-      background-size: cover
-
-    &--reactionBackground
-      background: url(../images/background-reaction.png) no-repeat center center
-      background-size: cover
 

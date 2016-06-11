@@ -7,37 +7,21 @@ html
       nav
         ul.navlist
           li.navlist-item.active 
-            a(class='navlist-item-link', href='#') Teaser
+            a(class='navlist-item-link', href='#teaser') Teaser
           li.navlist-item
-            a(class='navlist-item-link', href='#') Concept
+            a(class='navlist-item-link', href='#concept') Concept
           li.navlist-item
-            a(class='navlist-item-link', href='#') Team
+            a(class='navlist-item-link', href='#team') Team
 
     section.container#teaser
-      video(width="100%", height="100%", autoplay, muted, class="container-videobackground")
-        source(src="videos/sample-video.mp4", type="video/mp4")
-        |Your browser does not support the video tag.
+      include ./includes/teaser
 
-    section.container.container--createBackground#concept
-      div.container-overlay
-        h1 Create your own Mint
+    include ./includes/concept
+      
 
-    section.container.container--friendsBackground
-      div.container-overlay
-        h1 Let your friends find the surprise you hide
-
-    section.container.container--aroundBackground
-      div.container-overlay
-
-        div.container-overlay-bloc.container-overlay-bloc--left
-        div.container-overlay-bloc.container-overlay-bloc--right.container-overlay-bloc--tablePos
-          div.container-overlay-bloc-wrapper
-            h1.container-overlay-h1--aroundCustom All around them
-            p.container-overlay-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-    section.container.container--reactionBackground
-      div.container-overlay
-        h1 Find out how they reacted
+    section.container#team  
+      include ./includes/team     
+      
 
   script(src="/js/vendors/greensock/TweenMax.js")
   script(src="/js/main.js")

@@ -29,6 +29,10 @@
 		    case (window.scrollY >= window.innerHeight * 4 && window.scrollY < window.innerHeight * 5):
 		        TweenMax.to( this.navlistItem, 0.2, { color: "#FF0B45", ease: Circ.easeInOut } )
 		        break;
+		    case (window.scrollY >= window.innerHeight * 5 && window.scrollY < window.innerHeight * 6):
+		        TweenMax.to( this.navlistItem, 0.2, { color: "#4F4F4F", ease: Circ.easeInOut } )
+		        break;
+
 		    default:
 		        console.log("else");
 		        break;
