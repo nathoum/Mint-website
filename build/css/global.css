@@ -50,6 +50,9 @@ body .container {
   height: 100vh;
   position: relative;
 }
+body .container--greyBackground {
+  background-color: #4f4f4f;
+}
 body .container-listMembers {
   list-style: none;
   padding: 0;
@@ -178,11 +181,17 @@ body .container-h1--smallWidthTxt {
 body .container-h1--purpleTint {
   color: #9145db;
 }
+body .container-h1--whiteTint {
+  color: #fff;
+}
 body .container-h1-span {
   display: block;
 }
 body .container-h1-span--uppercase {
   text-transform: uppercase;
+}
+body .container-h1-span--normalWeight {
+  font-weight: normal;
 }
 body .container-h1-span--pinkTint {
   color: #ff0b45;
