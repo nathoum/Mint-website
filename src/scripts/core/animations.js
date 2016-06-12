@@ -46,25 +46,23 @@
 	animationOnScroll() {
 
 
-	    var controller = new ScrollMagic.Controller({
+	    this.controller = new ScrollMagic.Controller({
 		  globalSceneOptions: {
 		      triggerHook: "onEnter"
 		  }
 		});
 
 
-		var titleElements = document.getElementsByClassName("h1-anim");
-		for(var i = 0; i < titleElements.length; i++)
-		{
-		   var tween = TweenMax.fromTo(titleElements[i], 0.5, {css:{opacity: "0", marginLeft: "-50px"}}, {css:{opacity: "1", marginLeft: "0"}});
+		this.titleElements = document.getElementsByClassName("h1-anim");
+		 for ( let i = 0; i < this.titleElements.length; i++ ) { 
+		   this.tween = TweenMax.fromTo(this.titleElements[i], 0.5, {css:{opacity: "0", marginLeft: "-50px"}}, {css:{opacity: "1", marginLeft: "0"}});
 		   new ScrollMagic.Scene({
-			  triggerElement: titleElements[i],
+			  triggerElement: this.titleElements[i],
 			  triggerHook: "onEnter",
 			  offset: 100
 			})
-			.setTween(tween)
-			//.setPin("h1-anim")
-			.addTo(controller);
+			.setTween(this.tween)
+			.addTo(this.controller);
 		}
 
 
