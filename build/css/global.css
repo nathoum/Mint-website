@@ -150,6 +150,17 @@ body .container-bloc-wrapper--textalign {
 body .container-bloc-wrapper--center {
   text-align: center;
 }
+body .container-bloc-wrapper-content--sizeBackground {
+  height: 400px;
+  width: 201px;
+  margin: 0 auto;
+}
+body .container-bloc-wrapper-content--reaction {
+  background: url("../images/phone-reaction.png") no-repeat top center;
+}
+body .container-bloc-wrapper-content--around {
+  background: url("../images/phone-map.png") no-repeat top center;
+}
 body .container-bloc--tablePos {
   height: 100%;
   width: 100%;
