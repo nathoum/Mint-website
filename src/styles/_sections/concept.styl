@@ -1,4 +1,8 @@
 #concept
+  .canvas
+    width 200px
+    height 200px
+
   .selector
     position absolute
     top 50%
@@ -80,19 +84,3 @@
       percent = i / length * 100
       {percent + '%'}
         background-position purpleFrames[i]
-
-// @keyframes preloader
-//   nbFrames = length( frames )
-//   for i in nbFrames - 1
-//     percentage( i, nbFrames )
-//       background-position: i
-
-// @keyframes preloader {
-//   $nbFrames: length($frames);
-//   @for $i from 0 through $nbFrames - 1 {
-//     $frame: nth($frames, $i + 1);
-//     #{$i/$nbFrames*100}% {
-//       background-position: map-get($frame, position);
-//     }
-//   }
-// }

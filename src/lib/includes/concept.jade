@@ -3,14 +3,14 @@ section.container#concept
   div.container-overlay
 
   div.container-bloc.container-bloc--right.container-bloc--tablePos
-    canvas#mint
+    div#canvas.canvas
     div.selector
       ul
-        li.yellow
-        li.red
-        li.cyan
-        li.orange
-        li.purple
+        li.colorSelector.yellow( data-color='yellow' )
+        li.colorSelector.red( data-color='red' )
+        li.colorSelector.cyan( data-color='cyan' )
+        li.colorSelector.orange( data-color='orange' )
+        li.colorSelector.purple( data-color='purple' )
   div.container-bloc.container-bloc--left.container-bloc--tablePos
     div.container-bloc-wrapper.container-bloc-wrapper--center
       h1.container-h1.container-h1--smallWidthTxt.h1-anim 

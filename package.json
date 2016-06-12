@@ -24,10 +24,12 @@
     "npm": "*"
   },
   "devDependencies": {
-    "babelify": "*",
+    "babelify": "^6.3.0",
     "browser-sync": "*",
     "browserify": "*",
     "del": "*",
+    "glsl-noise": "0.0.0",
+    "glslify": "^5.0.2",
     "gulp": "*",
     "gulp-concat": "*",
     "gulp-copy": "*",
@@ -52,5 +54,10 @@
     "vinyl-source-stream": "*",
     "watchify": "*",
     "yargs": "*"
+  },
+  "dependencies": {
+    "gsap": "^1.18.0",
+    "mediator-js": "git+https://github.com/ajacksified/Mediator.js.git",
+    "three": "^0.77.1"
   }
 }
