@@ -1,0 +1,98 @@
+#concept
+  .selector
+    position absolute
+    top 50%
+    right 0
+    transform translateY( -50% ) scale( 0.5 )
+
+    ul
+      padding 0
+      margin 0
+      list-style none
+
+      li
+        width 200px
+        height 200px
+        overflow hidden
+        background-repeat no-repeat
+
+        &.yellow
+          background-image url( '../images/sprites/yellow.png' )
+          animation yellowSprite infinite steps( 1, end ) 1.5s
+
+        &.red
+          background-image url( '../images/sprites/red.png' )
+          animation redSprite infinite steps( 1, end ) 1.5s
+
+        &.cyan
+          background-image url( '../images/sprites/cyan.png' )
+          animation cyanSprite infinite steps( 1, end ) 1.5s
+
+        &.orange
+          background-image url( '../images/sprites/orange.png' )
+          animation orangeSprite infinite steps( 1, end ) 1.5s
+
+        &.purple
+          background-image url( '../images/sprites/purple.png' )
+          animation purpleSprite infinite steps( 1, end ) 1.5s
+
+  yellowFrames = -1px -1px, -1px -203px, -1px -405px, -1px -607px, -1px -809px, -203px -1px, -203px -203px, -203px -405px, -203px -607px, -203px -809px, -405px -1px, -607px -1px, -809px -1px, -1011px -1px, -405px -203px, -405px -405px, -405px -607px, -405px -809px, -607px -203px, -809px -203px, -1011px -203px, -607px -405px, -607px -607px, -607px -809px, -809px -405px, -1011px -405px, -809px -607px, -809px -809px, -1011px -607px, -1011px -809px
+
+  redFrames = -1px -1px, -203px -1px, -405px -1px, -607px -1px, -809px -1px, -1011px -1px, -1213px -1px, -1415px -1px, -1617px -1px, -1819px -1px, -1px -203px, -203px -203px, -405px -203px, -607px -203px, -809px -203px, -1011px -203px, -1213px -203px, -1415px -203px, -1617px -203px, -1819px -203px, -1px -405px, -203px -405px, -405px -405px, -607px -405px, -809px -405px, -1011px -405px, -1213px -405px, -1415px -405px, -1617px -405px, -1819px -405px, -1px -607px, -203px -607px, -405px -607px, -607px -607px, -809px -607px, -1011px -607px, -1213px -607px, -1415px -607px, -1617px -607px
+
+  cyanFrames = -1px -1px, -1px -203px, -1px -405px, -1px -607px, -1px -809px, -1px -1011px, -1px -1213px, -1px -1415px, -1px -1617px, -1px -1819px, -203px -1px, -203px -203px, -203px -405px, -203px -607px, -203px -809px, -203px -1011px, -203px -1213px, -203px -1415px, -203px -1617px, -203px -1819px, -405px -1px, -405px -203px, -405px -405px, -405px -607px, -405px -809px, -405px -1011px, -405px -1213px, -405px -1415px, -405px -1617px, -405px -1819px, -607px -1px, -607px -203px, -607px -405px, -607px -607px, -607px -809px, -607px -1011px, -607px -1213px, -607px -1415px, -607px -1617px, -607px -1819px, -809px -1px, -809px -203px, -809px -405px, -809px -607px, -809px -809px, -809px -1011px, -809px -1213px, -809px -1415px, -809px -1617px, -809px -1819px, -1011px -1px, -1011px -203px, -1011px -405px, -1011px -607px, -1011px -809px, -1011px -1011px, -1011px -1213px, -1011px -1415px, -1011px -1617px, -1011px -1819px
+
+  orangeFrames = -1px -1px, -1px -203px, -1px -405px, -1px -607px, -1px -809px, -203px -1px, -405px -1px, -607px -1px, -809px -1px, -203px -203px, -203px -405px, -203px -607px, -203px -809px, -405px -203px, -607px -203px, -809px -203px, -405px -405px, -405px -607px, -405px -809px, -607px -405px, -809px -405px, -607px -607px, -607px -809px
+
+  purpleFrames = -1px -1px, -1px -203px, -1px -405px, -1px -607px, -1px -809px, -203px -1px, -203px -203px, -203px -405px, -203px -607px, -203px -809px, -405px -1px, -405px -203px, -405px -405px, -405px -607px, -405px -809px, -607px -1px, -607px -203px, -607px -405px, -607px -607px, -607px -809px, -809px -1px, -809px -203px, -809px -405px, -809px -607px, -809px -809px, -1011px -1px
+
+  @keyframes yellowSprite
+    length = length( yellowFrames )
+    for i in ( 0..length )
+      percent = i / length * 100
+      {percent + '%'}
+        background-position yellowFrames[i]
+
+  @keyframes redSprite
+    length = length( redFrames )
+    for i in ( 0..length )
+      percent = i / length * 100
+      {percent + '%'}
+        background-position redFrames[i]
+
+  @keyframes cyanSprite
+    length = length( cyanFrames )
+    for i in ( 0..length )
+      percent = i / length * 100
+      {percent + '%'}
+        background-position cyanFrames[i]
+
+  @keyframes orangeSprite
+    length = length( orangeFrames )
+    for i in ( 0..length )
+      percent = i / length * 100
+      {percent + '%'}
+        background-position orangeFrames[i]
+
+  @keyframes purpleSprite
+    length = length( purpleFrames )
+    for i in ( 0..length )
+      percent = i / length * 100
+      {percent + '%'}
+        background-position purpleFrames[i]
+
+// @keyframes preloader
+//   nbFrames = length( frames )
+//   for i in nbFrames - 1
+//     percentage( i, nbFrames )
+//       background-position: i
+
+// @keyframes preloader {
+//   $nbFrames: length($frames);
+//   @for $i from 0 through $nbFrames - 1 {
+//     $frame: nth($frames, $i + 1);
+//     #{$i/$nbFrames*100}% {
+//       background-position: map-get($frame, position);
+//     }
+//   }
+// }
