@@ -50,6 +50,7 @@ class Animations {
 			}
 		});
 
+		//H1 animation
 		this.titleElements = document.getElementsByClassName("h1-anim");
 		for (let i = 0; i < this.titleElements.length; i++) {
 			this.tween = TweenMax.fromTo(this.titleElements[i], 0.5, { css: { opacity: "0", marginLeft: "-50px" } }, { css: { opacity: "1", marginLeft: "0" } });
@@ -57,6 +58,20 @@ class Animations {
 				triggerElement: this.titleElements[i],
 				triggerHook: "onEnter",
 				offset: 100
+			}).setTween(this.tween).addTo(this.controller);
+		}
+
+		//Background image animation
+		this.backgroundImg = document.getElementsByClassName("backgroundImg-anim");
+		for (let i = 0; i < this.backgroundImg.length; i++) {
+			//this.tween = TweenMax.fromTo(this.backgroundImg[i], 0.5, {css:{"background-position": "0% 100%"}}, {css:{"background-position": "50% 100%"}});
+
+			this.tween = TweenMax.fromTo(this.backgroundImg[i], 0.5, { css: { "left": "-50px" } }, { css: { "left": "0px" } });
+
+			new ScrollMagic.Scene({
+				triggerElement: this.backgroundImg[i],
+				triggerHook: "onEnter",
+				offset: 200
 			}).setTween(this.tween).addTo(this.controller);
 		}
 	}

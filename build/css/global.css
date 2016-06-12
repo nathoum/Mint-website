@@ -154,6 +154,7 @@ body .container-bloc-wrapper-content--sizeBackground {
   height: 400px;
   width: 201px;
   margin: 0 auto;
+  position: relative;
 }
 body .container-bloc-wrapper-content--reaction {
   background: url("../images/phone-reaction.png") no-repeat top center;
