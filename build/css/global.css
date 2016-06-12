@@ -50,6 +50,15 @@ body .container {
   height: 100vh;
   position: relative;
 }
+body .container-thanksbloc-h2 {
+  text-transform: uppercase;
+}
+body .container-thanksbloc-text {
+  width: 80%;
+  max-width: 500px;
+  margin: 0 auto;
+  color: #fff;
+}
 body .container--greyBackground {
   background-color: #4f4f4f;
 }
@@ -91,16 +100,16 @@ body .container-listMembers-item-p-span--purpleTint {
   color: #a162b1;
 }
 body .container-listMembers-item--member1 {
-  background: url("../images/member-mint-marianne.png") no-repeat top center;
+  background: url("../images/member-marianne.png") no-repeat top center;
 }
 body .container-listMembers-item--member2 {
-  background: url("../images/member-mint-celia.png") no-repeat top center;
+  background: url("../images/member-celia.png") no-repeat top center;
 }
 body .container-listMembers-item--member3 {
-  background: url("../images/member-mint-nath.png") no-repeat top center;
+  background: url("../images/member-nathalie.png") no-repeat top center;
 }
 body .container-listMembers-item--member4 {
-  background: url("../images/member-mint-souf.png") no-repeat top center;
+  background: url("../images/member-soufiane.png") no-repeat top center;
 }
 body .container-blurfilter {
   width: 100%;
@@ -219,6 +228,12 @@ body .container-h1-span--marginLeft {
 }
 body .container-h1-span--marginLeftBig {
   margin-left: 20%;
+}
+body .container-h1-span--letterspace {
+  letter-spacing: 0.2em;
+}
+body .container-h1-span--smallTxt {
+  font-size: 0.7em;
 }
 body .container-text {
   padding: 10px;
