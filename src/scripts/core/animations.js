@@ -10,6 +10,8 @@
     	this.navlistItem = document.getElementsByClassName("navlist-item-link")
     	console.log('height: '+ window.innerHeight)
     	window.addEventListener('scroll', evt => this.scrollAction(evt))
+
+    	this.animationOnScroll()
     }
 
     scrollAction(evt) {
@@ -39,6 +41,33 @@
 
 
 		}
+	}
+
+	animationOnScroll() {
+
+
+	    var controller = new ScrollMagic.Controller({
+		  globalSceneOptions: {
+		      triggerHook: "onEnter"
+		  }
+		});
+
+
+		var titleElements = document.getElementsByClassName("h1-anim");
+		for(var i = 0; i < titleElements.length; i++)
+		{
+		   var tween = TweenMax.fromTo(titleElements[i], 0.5, {css:{opacity: "0", marginLeft: "-50px"}}, {css:{opacity: "1", marginLeft: "0"}});
+		   new ScrollMagic.Scene({
+			  triggerElement: titleElements[i],
+			  triggerHook: "onEnter",
+			  offset: 100
+			})
+			.setTween(tween)
+			//.setPin("h1-anim")
+			.addTo(controller);
+		}
+
+
 	}
 
 }
