@@ -11,6 +11,13 @@
     	console.log('height: '+ window.innerHeight)
     	window.addEventListener('scroll', evt => this.scrollAction(evt))
 
+		/*this.selectorTeaser = document.querySelector(".link-teaser")
+		this.selectorTeaser.addEventListener('click', () => {
+        	this.handleScroll(); 
+    	});*/
+
+
+
     	this.animationOnScroll()
     }
 
@@ -70,7 +77,6 @@
 
 	scrollMagicAnim(selectors, typeAnim) {
 		for ( let i = 0; i < selectors.length; i++ ) { 
-			console.log(selectors[i])
 		   if(typeAnim == "imgAnim") {
 		   	this.tween = TweenMax.fromTo(selectors[i], 0.5, {css:{"left": "-50px"}}, {css:{"left": "0px"}});
 		   } else if( typeAnim == "h1Anim") {
@@ -89,6 +95,7 @@
 			.addTo(this.controller);
 		}
 	}
+
 
 }
 

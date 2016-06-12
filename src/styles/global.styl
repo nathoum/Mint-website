@@ -57,6 +57,11 @@ body
         margin: 0 auto
         color: white
 
+        &--marginTop
+          margin-top: -22px
+        &--normalWeight
+          font-weight: normal
+
 
 
     &--greyBackground
@@ -69,8 +74,6 @@ body
       text-align: center
 
       &-item
-        width: 20%
-        display: inline-block
         text-align: center
         height: 110px
         padding-top: 217px
@@ -172,21 +175,11 @@ body
 
 
 
-    &-bloc--tablePos
-      height: 100%
-      width: 100%
-      display: table
+    
 
     &-bloc--textalign
       text-align: center
 
-    &-bloc--left
-      float: left
-      width: 50%
-
-    &-bloc--right
-      float: right
-      width: 50%
 
     &-h1
       font-size: 2.0em
@@ -235,6 +228,7 @@ body
       max-width: 400px
       text-align: justify
 
+
       &--center
         margin: 0 auto
 
@@ -253,6 +247,63 @@ body
       background-position: center center
       object-fit: cover
 
+@media screen and (min-width: 1030px)
+  .container
+    &-bloc--left
+      float: left
+      width: 50% !important
+
+    &-bloc--tablePos
+      height: 100%
+      width: 100%
+      display: table
+
+    &-bloc--right
+      float: right
+      width: 50% !important
+
+    &-listMembers
+      &-item
+        display: inline-block
+        width: 20%
 
 
+@media screen and (min-width: 500px) and (max-width: 1029px) 
+  .container
+    &-bloc--left
+      float: left
+      width: 50% !important
+
+    &-bloc--tablePos
+      height: 100%
+      width: 100%
+      display: table
+
+    &-bloc--right
+      float: right
+      width: 50% !important
+    &--mediumHeight
+      height: 850px !important
+    &-listMembers
+      &-item
+        display: inline-block
+        width: 40%
+
+@media screen and (max-width: 499px)
+  .container
+    &-bloc--tablePos
+      width: 100%
+      display: table
+      text-align: center
+    &-bloc--left
+      padding-top: 15px
+    &--mobileConceptHeight
+      height: 800px !important
+    &--mobileHeight
+      height: 1500px !important
+    &-text
+      margin: 0 auto
+    &-listMembers
+      &-item
+        display: block
 

@@ -59,6 +59,12 @@ body .container-thanksbloc-text {
   margin: 0 auto;
   color: #fff;
 }
+body .container-thanksbloc-text--marginTop {
+  margin-top: -22px;
+}
+body .container-thanksbloc-text--normalWeight {
+  font-weight: normal;
+}
 body .container--greyBackground {
   background-color: #4f4f4f;
 }
@@ -69,8 +75,6 @@ body .container-listMembers {
   text-align: center;
 }
 body .container-listMembers-item {
-  width: 20%;
-  display: inline-block;
   text-align: center;
   height: 110px;
   padding-top: 217px;
@@ -171,21 +175,8 @@ body .container-bloc-wrapper-content--reaction {
 body .container-bloc-wrapper-content--around {
   background: url("../images/phone-map.png") no-repeat top center;
 }
-body .container-bloc--tablePos {
-  height: 100%;
-  width: 100%;
-  display: table;
-}
 body .container-bloc--textalign {
   text-align: center;
-}
-body .container-bloc--left {
-  float: left;
-  width: 50%;
-}
-body .container-bloc--right {
-  float: right;
-  width: 50%;
 }
 body .container-h1 {
   font-size: 2em;
@@ -260,4 +251,67 @@ body .container-videobackground {
   background-color: #000;
   background-position: center center;
   object-fit: cover;
+}
+@media screen and (min-width: 1030px) {
+  .container-bloc--left {
+    float: left;
+    width: 50% !important;
+  }
+  .container-bloc--tablePos {
+    height: 100%;
+    width: 100%;
+    display: table;
+  }
+  .container-bloc--right {
+    float: right;
+    width: 50% !important;
+  }
+  .container-listMembers-item {
+    display: inline-block;
+    width: 20%;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 1029px) {
+  .container-bloc--left {
+    float: left;
+    width: 50% !important;
+  }
+  .container-bloc--tablePos {
+    height: 100%;
+    width: 100%;
+    display: table;
+  }
+  .container-bloc--right {
+    float: right;
+    width: 50% !important;
+  }
+  .container--mediumHeight {
+    height: 850px !important;
+  }
+  .container-listMembers-item {
+    display: inline-block;
+    width: 40%;
+  }
+}
+@media screen and (max-width: 499px) {
+  .container-bloc--tablePos {
+    width: 100%;
+    display: table;
+    text-align: center;
+  }
+  .container-bloc--left {
+    padding-top: 15px;
+  }
+  .container--mobileConceptHeight {
+    height: 800px !important;
+  }
+  .container--mobileHeight {
+    height: 1500px !important;
+  }
+  .container-text {
+    margin: 0 auto;
+  }
+  .container-listMembers-item {
+    display: block;
+  }
 }
