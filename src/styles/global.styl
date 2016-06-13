@@ -47,6 +47,23 @@ body
     height: 100vh
     position: relative
 
+    &-thanksbloc
+      &-h2 
+        text-transform: uppercase
+
+      &-text
+        width: 80%
+        max-width: 500px
+        margin: 0 auto
+        color: white
+
+        &--marginTop
+          margin-top: -22px
+        &--normalWeight
+          font-weight: normal
+
+
+
     &--greyBackground
       background-color: #4F4F4F
 
@@ -57,8 +74,6 @@ body
       text-align: center
 
       &-item
-        width: 20%
-        display: inline-block
         text-align: center
         height: 110px
         padding-top: 217px
@@ -84,13 +99,13 @@ body
 
 
       &-item--member1
-        background: url(../images/member-mint-marianne.png) no-repeat top center
+        background: url(../images/member-marianne.png) no-repeat top center
       &-item--member2
-        background: url(../images/member-mint-celia.png) no-repeat top center
+        background: url(../images/member-celia.png) no-repeat top center
       &-item--member3
-        background: url(../images/member-mint-nath.png) no-repeat top center
+        background: url(../images/member-nathalie.png) no-repeat top center
       &-item--member4
-        background: url(../images/member-mint-souf.png) no-repeat top center
+        background: url(../images/member-soufiane.png) no-repeat top center
 
     &-blurfilter
       width: 100%
@@ -160,21 +175,11 @@ body
 
 
 
-    &-bloc--tablePos
-      height: 100%
-      width: 100%
-      display: table
+    
 
     &-bloc--textalign
       text-align: center
 
-    &-bloc--left
-      float: left
-      width: 50%
-
-    &-bloc--right
-      float: right
-      width: 50%
 
     &-h1
       font-size: 2.0em
@@ -209,6 +214,12 @@ body
           margin-left: 40px
         &--marginLeftBig
           margin-left: 20%
+        &--letterspace
+          letter-spacing: 0.2em
+        &--smallTxt
+          font-size: 0.7em
+        &--marginTop
+          margin-top: -16px
 
 
     &-text
@@ -216,6 +227,7 @@ body
       width: 84%
       max-width: 400px
       text-align: justify
+
 
       &--center
         margin: 0 auto
@@ -229,12 +241,69 @@ body
       right: 0
       width: 100%
       height: 100%
-      z-index: 2
+      z-index: 6
       background-size: 100% 100%
       background-color: black
       background-position: center center
-      background-size: contain
       object-fit: cover
 
+@media screen and (min-width: 1030px)
+  .container
+    &-bloc--left
+      float: left
+      width: 50% !important
 
+    &-bloc--tablePos
+      height: 100%
+      width: 100%
+      display: table
+
+    &-bloc--right
+      float: right
+      width: 50% !important
+
+    &-listMembers
+      &-item
+        display: inline-block
+        width: 20%
+
+
+@media screen and (min-width: 500px) and (max-width: 1029px) 
+  .container
+    &-bloc--left
+      float: left
+      width: 50% !important
+
+    &-bloc--tablePos
+      height: 100%
+      width: 100%
+      display: table
+
+    &-bloc--right
+      float: right
+      width: 50% !important
+    &--mediumHeight
+      height: 850px !important
+    &-listMembers
+      &-item
+        display: inline-block
+        width: 40%
+
+@media screen and (max-width: 499px)
+  .container
+    &-bloc--tablePos
+      width: 100%
+      display: table
+      text-align: center
+    &-bloc--left
+      padding-top: 15px
+    &--mobileConceptHeight
+      height: 800px !important
+    &--mobileHeight
+      height: 1500px !important
+    &-text
+      margin: 0 auto
+    &-listMembers
+      &-item
+        display: block
 
