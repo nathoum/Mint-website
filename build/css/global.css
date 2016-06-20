@@ -57,6 +57,7 @@ body .container {
 }
 body .container-thanksbloc-h2 {
   text-transform: uppercase;
+  color: #fff;
 }
 body .container-thanksbloc-text {
   width: 80%;
@@ -107,6 +108,11 @@ body .container-listMembers-item-p-span--yellowTint {
 }
 body .container-listMembers-item-p-span--purpleTint {
   color: #a162b1;
+}
+body .container-listMembers-item-p-span--cheddarJack {
+  font-family: CheddarJack;
+  font-size: 2.6em;
+  font-weight: normal;
 }
 body .container-listMembers-item--member1 {
   background: url("../images/member-marianne.png") no-repeat top center;
@@ -197,16 +203,44 @@ body .container-h1--whiteTint {
   color: #fff;
 }
 body .container-h1--friendsParticles {
-  background: url("../images/confettis-letyourfriends.png") no-repeat 65% 0%;
+  background: url("../images/confettis-letyourfriends.png") no-repeat 60% 0%;
   height: 215px;
   padding-top: 50px;
+}
+body .container-h1--aroundParticles {
+  background: url("../images/confettis-around.png") no-repeat 0% 0%;
+  height: 75px;
+  padding-top: 28px;
+  padding-left: 38px;
+}
+body .container-h1--findoutParticles {
+  background: url("../images/confettis-findout.png") no-repeat 0% 0%;
+  height: 130px;
+  padding-top: 50px;
+  text-align: center;
+  width: 500px;
+  position: relative;
+  left: -14%;
+}
+body .container-h1--lightCapit {
+  letter-spacing: 2px;
 }
 body .container-h1-span {
   display: block;
 }
 body .container-h1-span--lightCapit {
-  font-weight: normal;
   letter-spacing: 2px;
+}
+body .container-h1-span--cheddarJack {
+  font-family: CheddarJack;
+  font-size: 1.5em;
+  font-weight: normal;
+}
+body .container-h1-span--biggerFont {
+  font-size: 1.8em;
+  position: relative;
+  left: -8%;
+  bottom: -20px;
 }
 body .container-h1-span--uppercase {
   text-transform: uppercase;
@@ -246,6 +280,15 @@ body .container-text {
 }
 body .container-text--center {
   margin: 0 auto;
+}
+body .container-text--purpleTint {
+  color: #a162b1;
+}
+body .container-text--blueTint {
+  color: #6dbdb9;
+}
+body .container-text--pinkTint {
+  color: #f15757;
 }
 body .container-videobackground {
   position: absolute;
