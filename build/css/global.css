@@ -196,8 +196,17 @@ body .container-h1--purpleTint {
 body .container-h1--whiteTint {
   color: #fff;
 }
+body .container-h1--friendsParticles {
+  background: url("../images/confettis-letyourfriends.png") no-repeat 65% 0%;
+  height: 215px;
+  padding-top: 50px;
+}
 body .container-h1-span {
   display: block;
+}
+body .container-h1-span--lightCapit {
+  font-weight: normal;
+  letter-spacing: 2px;
 }
 body .container-h1-span--uppercase {
   text-transform: uppercase;
