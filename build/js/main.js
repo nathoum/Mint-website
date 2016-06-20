@@ -875,30 +875,10 @@ _$jscoverage['mediator.js'][16]++;
 
 var process = module.exports = {};
 
-// cached from whatever global is present so that test runners that stub it
-// don't break things.  But we need to wrap it in a try catch in case it is
-// wrapped in strict mode code which doesn't define any globals.  It's inside a
-// function because try/catches deoptimize in certain engines.
+// cached from whatever global is present so that test runners that stub it don't break things.
+var cachedSetTimeout = setTimeout;
+var cachedClearTimeout = clearTimeout;
 
-var cachedSetTimeout;
-var cachedClearTimeout;
-
-(function () {
-  try {
-    cachedSetTimeout = setTimeout;
-  } catch (e) {
-    cachedSetTimeout = function () {
-      throw new Error('setTimeout is not defined');
-    }
-  }
-  try {
-    cachedClearTimeout = clearTimeout;
-  } catch (e) {
-    cachedClearTimeout = function () {
-      throw new Error('clearTimeout is not defined');
-    }
-  }
-} ())
 var queue = [];
 var draining = false;
 var currentQueue;
@@ -42865,7 +42845,7 @@ module.exports = exports['default'];
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
-  value: true
+    value: true
 });
 
 var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
@@ -42891,58 +42871,58 @@ var _vendorsUtils = require('../vendors/utils');
 var _vendorsUtils2 = _interopRequireDefault(_vendorsUtils);
 
 var Curve = (function (_THREE$Object3D) {
-  _inherits(Curve, _THREE$Object3D);
+    _inherits(Curve, _THREE$Object3D);
 
-  function Curve(length, radius, color) {
-    _classCallCheck(this, Curve);
+    function Curve(length, radius, color) {
+        _classCallCheck(this, Curve);
 
-    _get(Object.getPrototypeOf(Curve.prototype), 'constructor', this).call(this);
+        _get(Object.getPrototypeOf(Curve.prototype), 'constructor', this).call(this);
 
-    this.radius = radius;
+        this.radius = radius;
 
-    var curve = new _three2['default'].EllipseCurve(0, 0, radius, radius, 0, length, false, 0);
-    var curvePath = new _three2['default'].CurvePath();
-    curvePath.add(curve);
-    var curveGeometry = curvePath.createPointsGeometry(50);
-    curveGeometry.computeLineDistances();
-    var curveMaterial = new _three2['default'].LineBasicMaterial({ color: color, linewidth: 3 });
-    this.curveMesh = new _three2['default'].Line(curveGeometry, curveMaterial);
-    this.add(this.curveMesh);
+        var curve = new _three2['default'].EllipseCurve(0, 0, radius, radius, 0, length, false, 0);
+        var curvePath = new _three2['default'].CurvePath();
+        curvePath.add(curve);
+        var curveGeometry = curvePath.createPointsGeometry(50);
+        curveGeometry.computeLineDistances();
+        var curveMaterial = new _three2['default'].LineBasicMaterial({ color: color, linewidth: 3 });
+        this.curveMesh = new _three2['default'].Line(curveGeometry, curveMaterial);
+        this.add(this.curveMesh);
 
-    this.headPosition = new _three2['default'].Object3D();
+        this.headPosition = new _three2['default'].Object3D();
 
-    this.particleSystem = new _particleSystem2['default']();
-    this.add(this.particleSystem);
+        this.particleSystem = new _particleSystem2['default']();
+        this.add(this.particleSystem);
 
-    this.counter = Math.random() * 3000;
-  }
-
-  _createClass(Curve, [{
-    key: 'updateColor',
-    value: function updateColor(color) {
-      var rgbColor = _vendorsUtils2['default'].hexToRGB(color);
-      TweenMax.to(this.curveMesh.material.color, 0.3, {
-        r: rgbColor[0] / 255, g: rgbColor[1] / 255, b: rgbColor[2] / 255
-      });
+        this.counter = Math.random() * 3000;
     }
-  }, {
-    key: 'update',
-    value: function update() {
-      var ease = 0.4 * Math.sin(this.counter / 100) + 0.6;
-      var angle = Math.PI * this.counter / 180;
 
-      this.curveMesh.rotation.z = angle + Math.PI * 90 / 180;
+    _createClass(Curve, [{
+        key: 'updateColor',
+        value: function updateColor(color) {
+            var rgbColor = _vendorsUtils2['default'].hexToRGB(color);
+            TweenMax.to(this.curveMesh.material.color, 0.3, {
+                r: rgbColor[0] / 255, g: rgbColor[1] / 255, b: rgbColor[2] / 255
+            });
+        }
+    }, {
+        key: 'update',
+        value: function update() {
+            var ease = 0.4 * Math.sin(this.counter / 100) + 0.6;
+            var angle = Math.PI * this.counter / 180;
 
-      this.headPosition.position.x = Math.cos(angle) * -this.radius;
-      this.headPosition.position.y = Math.sin(angle) * -this.radius;
+            this.curveMesh.rotation.z = angle + Math.PI * 90 / 180;
 
-      this.counter += 10 * ease;
+            this.headPosition.position.x = Math.cos(angle) * -this.radius;
+            this.headPosition.position.y = Math.sin(angle) * -this.radius;
 
-      this.particleSystem.update(this.headPosition.position);
-    }
-  }]);
+            this.counter += 10 * ease;
 
-  return Curve;
+            this.particleSystem.update(this.headPosition.position);
+        }
+    }]);
+
+    return Curve;
 })(_three2['default'].Object3D);
 
 exports['default'] = Curve;
