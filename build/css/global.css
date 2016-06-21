@@ -367,9 +367,27 @@ body .container-videobackground {
     display: block;
   }
 }
+#concept h1 {
+  font-size: 40px;
+  width: 500px;
+  margin: 0 auto !important;
+}
+#concept h1.container-h1--createParticles {
+  height: 135px;
+  background: url("../images/confettis-create-your-mint.png") no-repeat 336% 85%;
+  background-size: 102%;
+  padding-top: 110px;
+}
+#concept h1 span.container-h1-span--lightCapit {
+  font-family: 'Poppins-Bold', sans-serif;
+}
 #concept .canvas {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
 }
 #concept .selector {
   position: absolute;
@@ -2643,4 +2661,46 @@ body .container-videobackground {
   100% {
     background-position: ;
   }
+}
+#teaser .logo {
+  width: 130px;
+  height: 80px;
+  background: url("../images/logo-mint-white.png") no-repeat center center;
+  background-size: contain;
+  position: absolute;
+  top: 0px;
+  left: 50px;
+}
+#teaser h1 {
+  font-size: 60px;
+  margin: 0 auto !important;
+}
+#teaser h1.container-h1--teaserParticles {
+  height: 365px;
+  width: 1024px;
+  background: url("../images/confettis-texte-teaser.png") no-repeat 36% 34%;
+  background-size: 86%;
+  padding-top: 110px;
+}
+#teaser h1 span.container-h1-span--lightCapit {
+  font-family: 'Poppins-Bold', sans-serif;
+}
+#teaser .controls {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+#teaser .controls div.play {
+  width: 50px;
+  height: 50px;
+  background: url("../images/play.png") no-repeat center center;
+  background-size: cover;
+  margin: 0 auto;
+}
+#teaser .controls p {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  border-bottom: solid 1px #fff;
 }

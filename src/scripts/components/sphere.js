@@ -41,7 +41,6 @@ export default class Sphere extends THREE.Mesh {
     this.counter = 0
 
     if( !body ) {
-      this.scale.x = this.scale.y = this.scale.z = 0.97
       this.material.uniforms.coef.value = 2.0
     }
 
